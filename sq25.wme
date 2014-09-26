@@ -1,0 +1,36 @@
+(require* wmeTypes "wmeTypes.clp")
+
+;;;; Initial facts
+
+(assert (MAIN::initial-fact))   ; probably don't need this, but does not hurt
+
+;; -------------------------------------------------------------------------------------------
+;; This part varies by problem.
+
+(bind ?prob (assert (problem
+        ; these slots vary by problem
+        (name sq25)
+        (given-number 25))))   ; the number that will be squared in this problem.
+
+
+;; -------------------------------------------------------------------------------------------
+; The facts that represent the interface in working memory do not vary by problem.
+
+(bind ?ie1 (assert (interface-element (name firstPart))))    ; name must be the Flash component name
+(bind ?ie2 (assert (interface-element (name firstPartPlusOne))))
+(bind ?ie3 (assert (interface-element (name Product))))
+(bind ?ie4 (assert (interface-element (name Append25))))
+(bind ?ie5 (assert (interface-element (name finalAnswer))))
+
+; Link the interface facts to the problem facts to establish the mapping between the
+;   semantic representation of the problem and the facts in working memory that
+;   represent the interface.
+
+(modify ?prob      
+    (ie-first-part ?ie1)
+    (ie-first-part-plus-1 ?ie2)
+    (ie-product ?ie3)
+    (ie-append-25 ?ie4)
+    (ie-final-answer ?ie5)    
+      )
+

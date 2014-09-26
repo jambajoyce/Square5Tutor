@@ -1,0 +1,125 @@
+(require* wmeTypes "wmeTypes.clp")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;  This file contains Jess / CTAT production rules to solve and tutor
+;;  a shortcut strategy for taking the square of a number ending in 5.
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defrule find-first-part
+    (declare (salience 50))
+    ?prob <- (problem 	(given-number ?n)
+        				(first-part nil)
+        				(ie-first-part ?ie)
+        				(final-answer nil))
+    (test (= 5 (mod ?n 10)))   ; just to make sure the problem is the right type of problem
+    ?ie <- (interface-element (name ?sel)(value nil))
+  =>
+    (bind ?first (div ?n 10))    ; strip off the last digit (the 5)
+    (predict ?sel UpdateTextField ?first) ; model the observable action of writing the first part
+    	(modify ?prob (first-part ?first)) ; modify the semantic representation of the problem
+    (modify ?ie (value ?first)) ; modify the interface representation in working memory - optional in this model
+    (construct-message
+        "[For multi-digit numbers, the first part of the number includes all of the" 
+        " digits up until the last one (the ones place). For example, the first part"
+        " of 2935 is 293.]"
+        )    
+    
+    )
+
+(defrule add-one
+    ?prob <- (problem 	(first-part ?first&~nil)
+        				(first-part-plus-1 nil)
+        				(ie-first-part-plus-1 ?ie))
+    ?ie <- (interface-element (name ?sel) (value nil))
+  =>
+    (bind ?first+1 (+ ?first 1))    ; add 1
+    (predict ?sel UpdateTextField ?first+1) ; observable action
+    	(modify ?prob (first-part-plus-1 ?first+1)) ; modify semantic representation
+    (modify ?ie (value ?first+1)) ; modify interface representation
+        )
+
+
+(defrule product
+    ?prob <- (problem 	(first-part ?first&~nil)
+        				(first-part-plus-1 ?first+1&~nil)
+        				(product nil)
+        				(ie-product ?ie))
+    ?ie <- (interface-element (name ?sel) (value nil))
+  =>
+    (bind ?product (* ?first ?first+1))    ; multiply first to first+1   
+    (predict ?sel UpdateTextField ?product) ; observable action
+    (modify ?prob (product ?product)); modify semantic representation
+        
+    (modify ?ie (value ?product))	; modify interface representation
+    (construct-message
+        "[In other words, what is the answer to the first part multiplied by the first part + 1?]"
+        )
+)
+
+
+
+(defrule append-25
+    ?prob <- (problem 	(product ?product&~nil)
+        				(append-25 nil)
+        				(ie-append-25 ?ie))
+  	?ie <- (interface-element (name ?sel) (value nil))
+  =>
+    (bind ?append-25 (+ (* ?product 100) 25))
+    (predict ?sel UpdateTextField ?append-25)
+    (modify ?prob (append-25 ?append-25)) ; modify semantic representation
+    (modify ?ie (value ?append-25)) ; modify interface representation
+    (construct-message
+      "[ 'Append' means adding something as an attachment or supplement Add '25' 
+         behind the number you got for the product'.]"
+        )  
+)
+
+
+(defrule final-answer
+	?prob <- (problem 	(final-answer nil)
+        			  	(append-25 ?append-25&~nil)
+        				(ie-final-answer ?ie))
+    ?ie <- (interface-element (name ?sel) (value nil))
+  =>
+    (bind ?final-answer ?append-25)
+    (predict ?sel UpdateTextField ?final-answer)
+    (modify ?prob (final-answer ?final-answer))
+    (modify ?ie (value ?final-answer))
+    (construct-message
+      "[ Simply copy the answer that you obtained from Append-25.]"
+        )
+)
+
+; generalize
+
+(defrule done
+    ?prob <- (problem	(final-answer ?final-answer&~nil))
+=>
+	(predict-observable-action done ButtonPressed -1)
+    (construct-message
+      "[ You are done.  Press the done button.]"
+        )
+)
+
+
+; This bug rule is for when the student adds instead of multiplying
+
+(defrule BUG-product
+    ?prob <- (problem 	(first-part ?first&~nil)
+        				(first-part-plus-1 ?first+1&~nil)
+        				(product nil)
+        				(ie-product ?ie))
+    ?ie <- (interface-element (name ?sel) (value nil))
+=>
+    (bind ?product (+ ?first ?first+1))
+	(predict-observable-action ?sel UpdateTextField ?product)
+    (construct-message
+        "[You added the numbers together instead of multiplying them. Please try again.]"
+        )
+)
+
+
+

@@ -1,0 +1,1001 @@
+<?xml version="1.0" standalone="yes"?>
+
+<stateGraph firstCheckAllStates="false" caseInsensitive="true" unordered="false" lockWidget="true" hintPolicy="Use Both Kinds of Bias" version="2.1" suppressStudentFeedback="Show All Feedback" highlightRightSelection="true" startStateNodeName="%(startStateNodeName)%" tutorType="Cognitive Tutor (Jess)">
+    <startNodeMessages>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartProblem</MessageType>
+                <ProblemName>sq25</ProblemName>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CTATCommShell</WidgetType>
+                <CommName>theShell</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate CTATCommShell (slot_name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (CTATCommShell (name CTATCommShell) (value "" )))</value>
+                </jessInstances>
+                <serialized>
+                    <CTATCommShell name="theShell" x="0" y="0" width="550" height="400"></CTATCommShell>
+                </serialized>
+                <interface></interface>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CTATImageButton</WidgetType>
+                <CommName>null.nextButton</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate CTATImageButton (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (CTATImageButton (name null.nextButton) (value "hint request" )))</value>
+                </jessInstances>
+                <serialized>
+                    <CTATImageButton name="null.nextButton" x="0" y="0" width="82" height="21">
+                        <Parameters>
+                            <selection>
+                                <CTATComponentParameter>
+                                    <name>ShowHintHighlight</name>
+                                    <value fmt="text" name="Show Hint Highlight" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisabledInitially</name>
+                                    <value fmt="text" name="Disabled Initially" type="Boolean">false</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisableOnCorrect</name>
+                                    <value fmt="text" name="Disable On Correct" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>tutorComponent</name>
+                                    <value fmt="text" name="Tutor Component" type="String">Tutor</value>
+                                </CTATComponentParameter>
+                            </selection>
+                        </Parameters>
+                        <Styles>
+                            <selection>
+                                <CTATStyleProperty>
+                                    <name>labelText</name>
+                                    <value fmt="text" name="Label Text" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>DrawBorder</name>
+                                    <value fmt="text" name="Draw Border" type="Boolean">true</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>borderRoundness</name>
+                                    <value fmt="text" name="Border Roundness" type="Number">5</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>BorderColor</name>
+                                    <value fmt="text" name="Border Color" type="Color">999999</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontFace</name>
+                                    <value fmt="text" name="Font" type="String">Arial</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontSize</name>
+                                    <value fmt="text" name="Font Size" type="Number">12</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextColor</name>
+                                    <value fmt="text" name="Font Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontBold</name>
+                                    <value fmt="text" name="Font Bold" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontItalic</name>
+                                    <value fmt="text" name="Font Italic" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontUnderlined</name>
+                                    <value fmt="text" name="Font Underline" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextAlign</name>
+                                    <value fmt="text" name="Text Align" type="String">left</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>inspBackgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">f8f8f8</value>
+                                </CTATStyleProperty>
+                            </selection>
+                        </Styles>
+                    </CTATImageButton>
+                </serialized>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CTATTextInput</WidgetType>
+                <CommName>firstPartPlusOne</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate CTATTextInput (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (CTATTextInput (name firstPartPlusOne) (value "" )))</value>
+                </jessInstances>
+                <serialized>
+                    <CTATTextInput name="firstPartPlusOne" x="157.95" y="114.15" width="100" height="100">
+                        <Parameters>
+                            <selection>
+                                <CTATComponentParameter>
+                                    <name>ShowHintHighlight</name>
+                                    <value fmt="text" name="Show Hint Highlight" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisabledInitially</name>
+                                    <value fmt="text" name="Disabled Initially" type="Boolean">false</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisableOnCorrect</name>
+                                    <value fmt="text" name="Disable On Correct" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>tutorComponent</name>
+                                    <value fmt="text" name="Tutor Component" type="String">Tutor</value>
+                                </CTATComponentParameter>
+                            </selection>
+                        </Parameters>
+                        <Styles>
+                            <selection>
+                                <CTATStyleProperty>
+                                    <name>labelText</name>
+                                    <value fmt="text" name="Label Text" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>DrawBorder</name>
+                                    <value fmt="text" name="Draw Border" type="Boolean">true</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>borderRoundness</name>
+                                    <value fmt="text" name="Border Roundness" type="Number">5</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>BorderColor</name>
+                                    <value fmt="text" name="Border Color" type="Color">999999</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontFace</name>
+                                    <value fmt="text" name="Font" type="String">Arial</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontSize</name>
+                                    <value fmt="text" name="Font Size" type="Number">12</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextColor</name>
+                                    <value fmt="text" name="Font Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontBold</name>
+                                    <value fmt="text" name="Font Bold" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontItalic</name>
+                                    <value fmt="text" name="Font Italic" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontUnderlined</name>
+                                    <value fmt="text" name="Font Underline" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextAlign</name>
+                                    <value fmt="text" name="Text Align" type="String">left</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>inspBackgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">f8f8f8</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>backgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">ffffff</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>disabledBackgroundColor</name>
+                                    <value fmt="text" name="Disabled Background Color" type="Color">ffffff</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>disabledTextColor</name>
+                                    <value fmt="text" name="Disabled Text Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                            </selection>
+                        </Styles>
+                    </CTATTextInput>
+                </serialized>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CTATComponentReference</WidgetType>
+                <CommName>hint</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate CTATComponentReference (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (CTATComponentReference (name hint) (value "hint request" )))</value>
+                </jessInstances>
+                <serialized>
+                    <CTATHintButton name="hint" x="5.95" y="253.9" width="65" height="66">
+                        <Parameters>
+                            <selection>
+                                <CTATComponentParameter>
+                                    <name>ShowHintHighlight</name>
+                                    <value fmt="text" name="Show Hint Highlight" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                            </selection>
+                        </Parameters>
+                        <Styles>
+                            <selection>
+                                <CTATStyleProperty>
+                                    <name>labelText</name>
+                                    <value fmt="text" name="Label Text" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>DrawBorder</name>
+                                    <value fmt="text" name="Draw Border" type="Boolean">true</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>borderRoundness</name>
+                                    <value fmt="text" name="Border Roundness" type="Number">5</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>BorderColor</name>
+                                    <value fmt="text" name="Border Color" type="Color">999999</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontFace</name>
+                                    <value fmt="text" name="Font" type="String">Arial</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontSize</name>
+                                    <value fmt="text" name="Font Size" type="Number">12</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextColor</name>
+                                    <value fmt="text" name="Font Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontBold</name>
+                                    <value fmt="text" name="Font Bold" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontItalic</name>
+                                    <value fmt="text" name="Font Italic" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontUnderlined</name>
+                                    <value fmt="text" name="Font Underline" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextAlign</name>
+                                    <value fmt="text" name="Text Align" type="String">left</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>inspBackgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">f8f8f8</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>normalName</name>
+                                    <value fmt="text" name="Normal Image Name" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>hoverName</name>
+                                    <value fmt="text" name="Hover Image Name" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>clickName</name>
+                                    <value fmt="text" name="Clicked Image Name" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>disabledName</name>
+                                    <value fmt="text" name="Disabled Image Name" type="String"></value>
+                                </CTATStyleProperty>
+                            </selection>
+                        </Styles>
+                    </CTATHintButton>
+                </serialized>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CTATHintWindow</WidgetType>
+                <CommName>hintPanel</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate CTATHintWindow (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (CTATHintWindow (name hintPanel) (value "" )))</value>
+                </jessInstances>
+                <serialized>
+                    <CTATHintWindow name="hintPanel" x="76.95" y="252.9" width="100" height="100">
+                        <Parameters>
+                            <selection>
+                                <CTATComponentParameter>
+                                    <name>ShowHintHighlight</name>
+                                    <value fmt="text" name="Show Hint Highlight" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisabledInitially</name>
+                                    <value fmt="text" name="Disabled Initially" type="Boolean">false</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisableOnCorrect</name>
+                                    <value fmt="text" name="Disable On Correct" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                            </selection>
+                        </Parameters>
+                        <Styles>
+                            <selection>
+                                <CTATStyleProperty>
+                                    <name>labelText</name>
+                                    <value fmt="text" name="Label Text" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>DrawBorder</name>
+                                    <value fmt="text" name="Draw Border" type="Boolean">true</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>borderRoundness</name>
+                                    <value fmt="text" name="Border Roundness" type="Number">5</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>BorderColor</name>
+                                    <value fmt="text" name="Border Color" type="Color">999999</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontFace</name>
+                                    <value fmt="text" name="Font" type="String">Arial</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontSize</name>
+                                    <value fmt="text" name="Font Size" type="Number">12</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextColor</name>
+                                    <value fmt="text" name="Font Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontBold</name>
+                                    <value fmt="text" name="Font Bold" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontItalic</name>
+                                    <value fmt="text" name="Font Italic" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontUnderlined</name>
+                                    <value fmt="text" name="Font Underline" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextAlign</name>
+                                    <value fmt="text" name="Text Align" type="String">left</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>inspBackgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">f8f8f8</value>
+                                </CTATStyleProperty>
+                            </selection>
+                        </Styles>
+                    </CTATHintWindow>
+                </serialized>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CTATTextInput</WidgetType>
+                <CommName>firstPart</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate CTATTextInput (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (CTATTextInput (name firstPart) (value "" )))</value>
+                </jessInstances>
+                <serialized>
+                    <CTATTextInput name="firstPart" x="157.95" y="71" width="100" height="100">
+                        <Parameters>
+                            <selection>
+                                <CTATComponentParameter>
+                                    <name>ShowHintHighlight</name>
+                                    <value fmt="text" name="Show Hint Highlight" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisabledInitially</name>
+                                    <value fmt="text" name="Disabled Initially" type="Boolean">false</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisableOnCorrect</name>
+                                    <value fmt="text" name="Disable On Correct" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>tutorComponent</name>
+                                    <value fmt="text" name="Tutor Component" type="String">Tutor</value>
+                                </CTATComponentParameter>
+                            </selection>
+                        </Parameters>
+                        <Styles>
+                            <selection>
+                                <CTATStyleProperty>
+                                    <name>labelText</name>
+                                    <value fmt="text" name="Label Text" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>DrawBorder</name>
+                                    <value fmt="text" name="Draw Border" type="Boolean">true</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>borderRoundness</name>
+                                    <value fmt="text" name="Border Roundness" type="Number">5</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>BorderColor</name>
+                                    <value fmt="text" name="Border Color" type="Color">999999</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontFace</name>
+                                    <value fmt="text" name="Font" type="String">Arial</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontSize</name>
+                                    <value fmt="text" name="Font Size" type="Number">12</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextColor</name>
+                                    <value fmt="text" name="Font Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontBold</name>
+                                    <value fmt="text" name="Font Bold" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontItalic</name>
+                                    <value fmt="text" name="Font Italic" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontUnderlined</name>
+                                    <value fmt="text" name="Font Underline" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextAlign</name>
+                                    <value fmt="text" name="Text Align" type="String">left</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>inspBackgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">f8f8f8</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>backgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">ffffff</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>disabledBackgroundColor</name>
+                                    <value fmt="text" name="Disabled Background Color" type="Color">ffffff</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>disabledTextColor</name>
+                                    <value fmt="text" name="Disabled Text Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                            </selection>
+                        </Styles>
+                    </CTATTextInput>
+                </serialized>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceDescription</MessageType>
+                <WidgetType>CTATTextInput</WidgetType>
+                <CommName>Append25</CommName>
+                <UpdateEachCycle>false</UpdateEachCycle>
+                <jessDeftemplates>
+                    <value>(deftemplate CTATTextInput (slot name))</value>
+                </jessDeftemplates>
+                <jessInstances>
+                    <value>(assert (CTATTextInput (name Append25) (value "" )))</value>
+                </jessInstances>
+                <serialized>
+                    <CTATTextInput name="Append25" x="159.45" y="186.95" width="100" height="100">
+                        <Parameters>
+                            <selection>
+                                <CTATComponentParameter>
+                                    <name>ShowHintHighlight</name>
+                                    <value fmt="text" name="Show Hint Highlight" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisabledInitially</name>
+                                    <value fmt="text" name="Disabled Initially" type="Boolean">false</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>DisableOnCorrect</name>
+                                    <value fmt="text" name="Disable On Correct" type="Boolean">true</value>
+                                </CTATComponentParameter>
+                                <CTATComponentParameter>
+                                    <name>tutorComponent</name>
+                                    <value fmt="text" name="Tutor Component" type="String">Tutor</value>
+                                </CTATComponentParameter>
+                            </selection>
+                        </Parameters>
+                        <Styles>
+                            <selection>
+                                <CTATStyleProperty>
+                                    <name>labelText</name>
+                                    <value fmt="text" name="Label Text" type="String"></value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>DrawBorder</name>
+                                    <value fmt="text" name="Draw Border" type="Boolean">true</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>borderRoundness</name>
+                                    <value fmt="text" name="Border Roundness" type="Number">5</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>BorderColor</name>
+                                    <value fmt="text" name="Border Color" type="Color">999999</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontFace</name>
+                                    <value fmt="text" name="Font" type="String">Arial</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontSize</name>
+                                    <value fmt="text" name="Font Size" type="Number">12</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextColor</name>
+                                    <value fmt="text" name="Font Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontBold</name>
+                                    <value fmt="text" name="Font Bold" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontItalic</name>
+                                    <value fmt="text" name="Font Italic" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>FontUnderlined</name>
+                                    <value fmt="text" name="Font Underline" type="Boolean">false</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>TextAlign</name>
+                                    <value fmt="text" name="Text Align" type="String">left</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>inspBackgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">f8f8f8</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>backgroundColor</name>
+                                    <value fmt="text" name="Background Color" type="Color">ffffff</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>disabledBackgroundColor</name>
+                                    <value fmt="text" name="Disabled Background Color" type="Color">ffffff</value>
+                                </CTATStyleProperty>
+                                <CTATStyleProperty>
+                                    <name>disabledTextColor</name>
+                                    <value fmt="text" name="Disabled Text Color" type="Color">0</value>
+                                </CTATStyleProperty>
+                            </selection>
+                        </Styles>
+                    </CTATTextInput>
+                </serialized>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>InterfaceAction</MessageType>
+                <transaction_id>114AC517FC52E942</transaction_id>
+                <Selection>
+                    <value>givenNum</value>
+                </Selection>
+                <Action>
+                    <value>UpdateTextField</value>
+                </Action>
+                <Input>
+                    <value>25</value>
+                </Input>
+            </properties>
+        </message>
+        <message>
+            <verb>NotePropertySet</verb>
+            <properties>
+                <MessageType>StartStateEnd</MessageType>
+            </properties>
+        </message>
+    </startNodeMessages>
+    <node locked="false" doneState="false">
+        <text>sq25</text>
+        <uniqueID>1</uniqueID>
+        <dimension>
+            <x>374</x>
+            <y>30</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state1</text>
+        <uniqueID>2</uniqueID>
+        <dimension>
+            <x>369</x>
+            <y>140</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state2</text>
+        <uniqueID>3</uniqueID>
+        <dimension>
+            <x>369</x>
+            <y>250</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state3</text>
+        <uniqueID>4</uniqueID>
+        <dimension>
+            <x>369</x>
+            <y>360</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state4</text>
+        <uniqueID>5</uniqueID>
+        <dimension>
+            <x>369</x>
+            <y>470</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="false">
+        <text>state5</text>
+        <uniqueID>6</uniqueID>
+        <dimension>
+            <x>369</x>
+            <y>580</y>
+        </dimension>
+    </node>
+    <node locked="false" doneState="true">
+        <text>Done</text>
+        <uniqueID>7</uniqueID>
+        <dimension>
+            <x>373</x>
+            <y>690</y>
+        </dimension>
+    </node>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>1</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>7A42C2219CC2D2DB</transaction_id>
+                    <Selection>
+                        <value>firstPart</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>2</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>By "First part" we mean the number without the 5.</hintMessage>
+            <hintMessage>Start by dropping the 5.</hintMessage>
+            <hintMessage>Please enter '2' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>SUCCESS</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">firstPart</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">2</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>find-first-part square5</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>1</sourceID>
+        <destID>2</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>3</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>DC3AFCFF0901778C</transaction_id>
+                    <Selection>
+                        <value>firstPartPlusOne</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>3</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Now add 1 to the number you just entered.</hintMessage>
+            <hintMessage>Please enter '3' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>SUCCESS</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">firstPartPlusOne</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">3</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>add-one square5</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>2</sourceID>
+        <destID>3</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>5</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>00E6B8C7F319AAD0</transaction_id>
+                    <Selection>
+                        <value>Product</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>6</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>Next step: add the product of these two numbers.</hintMessage>
+            <hintMessage>Multiply 2 and 3.</hintMessage>
+            <hintMessage>Please enter '6' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>SUCCESS</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Product</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">6</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>multiply square5</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>3</sourceID>
+        <destID>4</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>7</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>57C0B0621A8D9A06</transaction_id>
+                    <Selection>
+                        <value>Append25</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>625</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>The next thing you need to do is append the 25 to the number you just got.</hintMessage>
+            <hintMessage>Append 25 to 6.</hintMessage>
+            <hintMessage>Please enter '625' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>SUCCESS</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">Append25</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">625</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>append-25 square5</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>4</sourceID>
+        <destID>5</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>9</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>769D4B56EF5D5B72</transaction_id>
+                    <Selection>
+                        <value>finalAnswer</value>
+                    </Selection>
+                    <Action>
+                        <value>UpdateTextField</value>
+                    </Action>
+                    <Input>
+                        <value>625</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>The final answer is the number you just got.</hintMessage>
+            <hintMessage>Please enter '625' in the highlighted field.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>SUCCESS</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">finalAnswer</matcherParameter>
+                <matcherParameter name="action">UpdateTextField</matcherParameter>
+                <matcherParameter name="input">625</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>5</sourceID>
+        <destID>6</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <edge>
+        <actionLabel preferPathMark="true" minTraversals="1" maxTraversals="1">
+            <studentHintRequest></studentHintRequest>
+            <stepSuccessfulCompletion></stepSuccessfulCompletion>
+            <stepStudentError></stepStudentError>
+            <uniqueID>11</uniqueID>
+            <message>
+                <verb>NotePropertySet</verb>
+                <properties>
+                    <MessageType>InterfaceAction</MessageType>
+                    <transaction_id>AD17922DA6D7E826</transaction_id>
+                    <Selection>
+                        <value>done</value>
+                    </Selection>
+                    <Action>
+                        <value>ButtonPressed</value>
+                    </Action>
+                    <Input>
+                        <value>-1</value>
+                    </Input>
+                </properties>
+            </message>
+            <buggyMessage>No, this is not correct.</buggyMessage>
+            <successMessage></successMessage>
+            <hintMessage>You're done with this problem.  Yay!!</hintMessage>
+            <hintMessage>Please click the 'Done' button.</hintMessage>
+            <callbackFn></callbackFn>
+            <actionType>Correct Action</actionType>
+            <oldActionType>Correct Action</oldActionType>
+            <checkedStatus>SUCCESS</checkedStatus>
+            <matcher>
+                <matcherType>ExactMatcher</matcherType>
+                <matcherParameter name="selection">done</matcherParameter>
+                <matcherParameter name="action">ButtonPressed</matcherParameter>
+                <matcherParameter name="input">-1</matcherParameter>
+                <matcherParameter name="actor">Student</matcherParameter>
+            </matcher>
+        </actionLabel>
+        <preCheckedStatus>No-Applicable</preCheckedStatus>
+        <rule>
+            <text>unnamed</text>
+            <indicator>-1</indicator>
+        </rule>
+        <sourceID>6</sourceID>
+        <destID>7</destID>
+        <traversalCount>0</traversalCount>
+        <SimSt></SimSt>
+    </edge>
+    <productionRule>
+        <ruleName>find-first-part</ruleName>
+        <productionSet>square5</productionSet>
+    </productionRule>
+    <productionRule>
+        <ruleName>append-25</ruleName>
+        <productionSet>square5</productionSet>
+    </productionRule>
+    <productionRule>
+        <ruleName>multiply</ruleName>
+        <productionSet>square5</productionSet>
+    </productionRule>
+    <productionRule>
+        <ruleName>add-one</ruleName>
+        <productionSet>square5</productionSet>
+    </productionRule>
+    <EdgesGroups ordered="true"></EdgesGroups>
+</stateGraph>
+
